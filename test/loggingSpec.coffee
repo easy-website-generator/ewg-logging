@@ -1,6 +1,6 @@
 logging = require '../index'
 expect  = require('chai').expect
-sinon   = require 'sinon'
+spy     = require('sinon').spy
 
 describe 'ewg/logging', ->
   a    = 1
@@ -9,7 +9,7 @@ describe 'ewg/logging', ->
 
   describe '#log()', ->
     beforeEach ->
-      sinon.spy(logging.console.log, 'call')
+      spy(logging.console.log, 'call')
 
     afterEach ->
       logging.console.log.call.restore()
