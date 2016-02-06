@@ -3,6 +3,9 @@
 
 The logging module used by Easy-Website-Generator
 
+### installation
+``npm install --save ewg-logging``
+
 ### Ressources
 > "[Easy-Website-Generator](https://github.com/easy-website-generator/)"
 
