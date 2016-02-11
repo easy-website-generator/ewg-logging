@@ -6,7 +6,7 @@ log = (args, color) ->
   if color
     args = args.map (arg) -> util.inspect(arg)[color]
 
-  console.log.call(args)
+  console.log.apply(this, args)
 
 module.exports =
   console: console

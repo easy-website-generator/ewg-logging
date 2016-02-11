@@ -9,12 +9,11 @@ describe 'ewg/logging', ->
 
   describe '#log()', ->
     beforeEach ->
-      spy(logging.console.log, 'call')
+      spy(logging.console.log, 'apply')
 
     afterEach ->
-      logging.console.log.call.restore()
+      logging.console.log.apply.restore()
 
     it 'logs mulitple arguments', ->
         logging.log(a, b)
-        expect( logging.console.log.call.calledOnce ).to.be.true
-        expect( logging.console.log.call.calledWith(args) ).to.be.true
+        expect( logging.console.log.apply.calledOnce ).to.be.true
